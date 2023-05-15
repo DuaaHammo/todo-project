@@ -451,3 +451,16 @@ section header.active {
 footer a {
   color: #b1b1b1;
 }
+body {
+  font: var(--fw-normal) var(--base-font) var(--ff-sans);
+  background: var(--clr-page-bg) var(--img-bg) no-repeat;
+  background-size: 100vw 30rem;
+  padding-top: 8rem;
+  width: min(85%, 54rem);
+  margin: auto;
+}
+
+:root {
+ 
+   --img-bg: url("https://mir-s3-cdn-cf.behance.net/project_modules/fs/f964ec115068253.646285f12e55c.png"); 
+}
