@@ -1,0 +1,327 @@
+/*---header--*/
+
+section header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent; 
+ 
+}
+
+section header .logo {
+  display: flex; 
+  align-items: center; 
+  margin-right: 2rem;
+}
+
+section header .logo a {
+  display: inline-block;
+}
+
+section header .logo img {
+  width: 5rem;
+}
+
+section header nav {
+  display: flex; 
+  align-items: center; 
+}
+
+section header nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+section header nav ul li a {
+  color: var(--clr-white);
+  font-size: 1.8rem;
+  text-decoration: none;
+}
+
+section header nav ul li a:hover {
+  color: var(--clr-blue);
+}
+
+@keyframes moveHeader {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/*--header motion--*/
+section header {
+  transform: translateY(-100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+section header.active {
+  transform: translateY(0);
+}
+
+
+section header {
+  width: 100%; 
+  height: 10vh; 
+}
+/*--root--*/
+:root {
+    --ff-sans: "Josefin Sans", sans-serif;
+    --base-font: 1.6rem;
+    --fw-normal: 400;
+    --fw-bold: 700;
+    --img-bg: url("/assets/blur.png");
+    --clr-primary: hsl(0, 0%, 98%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-page-bg: #393E46;
+    --clr-card-bg: #6D9886;
+    --clr-blue: #f9b952;
+    --clr-green: #F2E7D5;
+    --clr-pink: hsl(280, 87%, 65%);
+    --clr-gb-1: hsl(236, 33%, 92%);
+    --clr-gb-2: hsl(234, 39%, 75%);
+    --clr-gb-3: hsl(234, 11%, 52%);
+    --clr-gb-4: hsl(237, 12%, 36%);
+    --clr-gb-5: hsl(233, 14%, 35%);
+    --clr-gb-6: hsl(235, 19%, 24%);
+    --clr-box-shadow: hsl(0, 0%, 0%, 0.1);
+  }
+
+  /*---User Agent Stylesheet--*/
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 62.5%;
+    position: relative;
+  }
+  
+  html,
+  body {
+    min-height: 100%;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  img {
+    user-select: none;
+  }
+
+  body {
+    font: var(--fw-normal) var(--base-font) var(--ff-sans);
+    background: var(--clr-page-bg) var(--img-bg) no-repeat 0% 0% / 100vw 30rem;
+    padding-top: 8rem;
+    width: min(85%, 54rem);
+    margin: auto;
+  }
+  
+  /*--input--*/
+
+  input,
+  button {
+    font: inherit; 
+                      
+    border: 0;
+    background: transparent;
+  }
+  
+  input:focus,
+  button:focus {
+    outline: 0;
+  }
+  
+  button {
+    display: flex;
+    user-select: none;
+  }
+
+/*--Card--*/
+.card {
+  background-color: var(--clr-card-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.9rem 2rem;
+  gap: 2rem;
+}
+header.card {
+  background: transparent;
+  padding: 0;
+  align-items: flex-start;
+}
+
+header.card h1 {
+  color: var(--clr-white);
+  letter-spacing: 1.3rem;
+  font-weight: 700;
+  font-size: calc(var(--base-font) * 2);
+}
+
+.add {
+  margin: 4rem 0 2.5rem 0;
+  border-radius: 0.5rem;
+}
+
+/* add-btn */
+.add .cb-container #add-btn {
+  color: var(--clr-gb-2);
+  font-size: var(--base-font);
+  transition: color 0.3s ease;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+/* add some transition for background */
+.add .cb-container {
+  transition: background 0.3s ease;
+}
+
+/* define some states */
+.add .cb-container:hover {
+  background: var(--clr-blue);
+}
+.add .cb-container:active {
+  transform: scale(0.95);
+}
+
+.add .cb-container:hover #add-btn {
+  color: var(--clr-white);
+}
+.add .txt-container {
+  flex: 1;
+}
+
+.add .txt-container .txt-input {
+  width: 100%;
+  padding: 0.7rem 0;
+  color: var(--clr-gb-1);
+}
+.add .txt-container .txt-input::placeholder {
+  color: var(--clr-gb-5);
+  font-weight: var(--fw-normal);
+}
+.card .cb-container {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0.1rem solid var(--clr-gb-5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.card .cb-container .cb-input {
+  transform: scale(1.8);
+  opacity: 0;
+}
+
+.card .cb-container .check {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.card .cb-container .cb-input:checked + .check {
+  background: url("../assets/images/icon-check.svg"),
+    linear-gradient(45deg, var(--clr-green), var(--clr-pink));
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.todos .card:first-child {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.todos > * + * {
+  border-top: 0.2rem solid var(--clr-gb-6);
+}
+.item {
+  flex: 1; /* item needs to be stretched */
+  color: var(--clr-gb-2);
+}
+
+
+.item:hover {
+  color: var(--clr-gb-1);
+}
+
+
+.clear {
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+
+
+
+.todos .card:hover .clear {
+  opacity: 1;
+}
+
+
+
+.stat {
+  border-radius: 0 0 0.5rem 0.5rem;
+  border-top: 0.2rem solid var(--clr-gb-6);
+  font-size: calc(var(--base-font) - 0.3rem);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.stat * {
+  color: var(--clr-gb-4);
+}
+.stat .filter {
+  display: flex;
+  justify-content: space-between;
+  font-weight: var(--fw-bold);
+}
+
+.stat .filter *:hover {
+  color: var(--clr-primary);
+}
+.stat .corner:last-child {
+  justify-self: end;
+}
+
+/* Hover state for button */
+.stat .corner button:hover {
+  color: var(--clr-primary);
+}
+
+
+/*--footer--*/
+footer {
+  margin: 4rem 0;
+  text-align: center;
+  color: #6D9886;
+}
+
+footer {
+  color: white;
+}
+.add-btn {
+  color: #ededec; 
+  transition: color 0.3s ease; 
+}
+
+.add-btn:hover {
+  color: var(--clr-blue); 
+}
+
