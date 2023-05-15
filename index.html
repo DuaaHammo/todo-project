@@ -16,7 +16,7 @@
         <header class="header">
             <div class="logo">
               <a href="./index.html">
-                <img src="./assets/logo.png" alt="Logo">
+                <img src="./assets/lo.png" alt="Logo">
               </a>
             </div>
             <nav>
@@ -35,69 +35,69 @@
             <img src="./assets/sun-.png" alt="Change color theme" />
         </button>
     </div>
-<!--/-->
+
     <main>
-        <div class="card add">
-          <div class="cb-container">
-            <button id="add-btn">+</button>
-          </div>
-          <div class="txt-container">
-            <input
-              type="text"
-              class="txt-input"
-              placeholder="Create a new todo..."
-              spellcheck="false"
-              autocomplete="off"
-            />
-          </div>
+      <div class="card add">
+        <div class="cb-container">
+          <button id="add-btn">+</button>
         </div>
-        <section class="todos">
-            <!-- Task 1 -->
-           <div class="card add">
-             <div class="cb-container">
-             <button class="add-btn">✓</button>
-             </div>
-             <div class="txt-container">
-              <input
-               type="text"
-               class="txt-input"
-               placeholder="task 1  - Lab02 "
-               spellcheck="false"
-               autocomplete="off"
-               />
-             </div>
-           </div>
+        <div class="txt-container">
+          <input
+            type="text"
+            class="txt-input"
+            placeholder="Create a new todo..."
+            spellcheck="false"
+            autocomplete="off"
+          />
+        </div>
+      </div>
  
-             <!-- Task 2 -->
-             <div class="card add">
-                 <div class="cb-container">
-                     <button class="add-btn">✓</button>
-                 </div>
-                 <div class="txt-container">
-                     <input
-                         type="text"
-                         class="txt-input"
-                         placeholder="task 2 - Lab 01"
-                         spellcheck="false"
-                         autocomplete="off"
-                     />
-                 </div>
-             </div>
-         </section>
-        <ul class="todos"></ul>
-        <div class="card stat">
-          <p class="corner"><span id="items-left">0</span> items left</p>
-          <div class="filter">
-            <button id="all" class="on">All</button>
-            <button id="active">Active</button>
-            <button id="completed">Completed</button>
-          </div>
-          <div class="corner">
-            <button id="clear-completed">Clear Completed</button>
-          </div>
-        </div>
-      </main>
       
+      <table id="tasktable">
+        <thead>
+          <tr>
+            <th>Task</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <br>
+          <tr>
+            <td>Task 1 - Lab02</td>
+            <td>Not Yet</td>
+          </tr>
+          <tr>
+            <td>Lab-03: Pull Requests</td>
+            <td>Completed</td>
+          </tr>
+          <tr>
+            <td>Lab-04: HTML - CSS</td>
+            <td>Completed</td>
+          </tr>
+          <tr>
+            <td>Lab05: Layout</td>
+            <td>Completed</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <ul class="todos"></ul>
+      <div class="card stat">
+        <p class="corner"><span id="items-left">0</span> items left</p>
+        <div class="filter">
+          <button id="all" class="on">All</button>
+          <button id="active">Active</button>
+          <button id="completed">Completed</button>
+        </div>
+        <div class="corner">
+          <button id="clear-completed">Clear Completed</button>
+        </div>
+      </div>
+  </main>
+  
+
+
+
 
 
     <!--Footer-->

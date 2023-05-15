@@ -41,7 +41,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #333;
+  color: #393E46;
   font-weight: bold;
 }
 
@@ -63,7 +63,7 @@ section {
 h2 {
   margin-bottom: 10px;
   font-size: 24px;
-  color: #333;
+  color: #393E46;
 }
 
 .info {
@@ -81,7 +81,7 @@ h2 {
 
 .info h3 {
   font-size: 20px;
-  color: #333;
+  color: #393E46;
   margin-top: 30px;
 }
 
@@ -104,7 +104,7 @@ label {
   display: block;
   font-weight: bold;
   margin-bottom: 5px;
-  color: #333;
+  color: #393E46;
 }
 
 input,
@@ -117,7 +117,7 @@ textarea {
 
 button[type="submit"] {
   padding: 10px 20px;
-  background-color: #333;
+  background-color: #393E46;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -140,13 +140,13 @@ footer {
 }
 
 .footer-content a {
-  color: #333;
+  color: #393E46;
   text-decoration: none;
   font-weight: bold;
 }
 
 .footer-content a:hover {
-  color: #000;
+  color: #393E46;
 }
 
 body,
