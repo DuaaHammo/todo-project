@@ -78,7 +78,7 @@ section header {
   --clr-card-bg: #393E46; /* dark blue */
   --clr-blue: #666666; /* dark gray */
   --clr-green: #393E46; /* dark blue */
-  --clr-pink: hsl(280, 87%, 65%);
+  --clr-pink: hsl(50, 100%, 50%);
   --clr-gb-1: hsl(236, 33%, 92%);
   --clr-gb-2: hsl(234, 39%, 75%);
   --clr-gb-3: hsl(234, 11%, 52%);
@@ -202,10 +202,10 @@ header.card h1 {
 .add .txt-container .txt-input {
   width: 100%;
   padding: 0.7rem 0;
-  color: var(--clr-gb-1);
+  color: #ededec;
 }
 .add .txt-container .txt-input::placeholder {
-  color: var(--clr-gb-5);
+  color: #ededec;
   font-weight: var(--fw-normal);
 }
 .card .cb-container {
@@ -235,7 +235,7 @@ header.card h1 {
 }
 
 .card .cb-container .cb-input:checked + .check {
-  background: url("../assets/images/icon-check.svg"),
+  background: url("../assets/icon-check.png"),
     linear-gradient(45deg, var(--clr-green), var(--clr-pink));
   background-repeat: no-repeat;
   background-position: center;

@@ -1,44 +1,61 @@
-//* Name */
+var username = prompt("Please enter your name:");
+var gender = ""
+var title = "";
+var answers=[]
 
-let userName = prompt("Please enter your name:");
-console.log("Hello, " + userName + "!");
+function selectGender() {
+   gender = prompt("Please enter your gender (male/female):");
+  if (gender === "male") {
+    title = "Mr.";
+  } else if (gender === "female") {
+    title = "Ms.";
+  }
+}
 
+function checkAge() {
 
-/* Age */
-let age = parseInt(prompt("Please enter your age:"));
+  var age = parseInt(prompt("Please enter your age:"));
 
-if (age <= 0) {
-  alert("Invalid age! Age must be greater than zero.");
-} else {
-  alert("Valid age. Thank you!");
+  if (age <= 0) {
+    alert("Invalid age! Age must be greater than zero.");
+  } else {
+    alert("Valid age. Thank you!");
+  }
+
+}
+
+function welcomeMessage(){
+  var skipMessage = confirm("Do you want to skip the welcoming message?");
+
+  if (!skipMessage) {
+    alert("Welcome, " + title + " " + username + "!");
+  }
+
+}
+
+function questions(){
+var q1 = prompt("Do you love ASAC?");
+var q2 = prompt("Are you here?");
+var q3 = prompt("Do you love Bayan?");
+
+answers = [q1, q2, q3];
 }
 
 
-//* Welcome Message */
+function displayAnswers() {
 
-let skipMessage = confirm("Do you want to skip the welcoming message?");
+  for (let i = 0; i < answers.length; i++) {
 
-if (skipMessage) {
-  console.log("Skipping the welcoming message.");
-} else {
-  console.log("Welcome to our website!");
+    if (answers[i] === "") {
+      answers[i] = "invalid";
+    }
+    console.log(answers[i]);
+
+  }
+
 }
-
-/* Mr & Ms */
-let username = prompt("Please enter your name:");
-let userGender = prompt("Please enter your gender (male/female):");
-let welcomemessage;
-
-if (userGender.toLowerCase() === "male") {
-  welcomemessage = "Welcome, Mr " + username + "!";
-} else if (userGender.toLowerCase() === "female") {
-  welcomemessage = "Welcome, Ms " + username + "!";
-} else {
-  welcomemessage = "Welcome, " + username + "!";
-}
-
-let skipmessage = confirm("Do you want to skip the welcoming message?");
-
-if (!skipmessage) {
-  alert(welcomemessage);
-}
+selectGender()
+checkAge()
+welcomeMessage();
+questions();
+displayAnswers();
