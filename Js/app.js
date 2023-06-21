@@ -33,13 +33,13 @@ function welcomeMessage(){
 
 }
 
-function questions(){
-var q1 = prompt("Do you love ASAC?");
-var q2 = prompt("Are you here?");
-var q3 = prompt("Do you love Bayan?");
+// function questions(){
+// var q1 = prompt("Do you love ASAC?");
+// var q2 = prompt("Are you here?");
+// var q3 = prompt("Do you love Bayan?");
 
-answers = [q1, q2, q3];
-}
+// answers = [q1, q2, q3];
+// }
 
 
 function displayAnswers() {
