@@ -263,3 +263,10 @@ function addTodo(todos = JSON.parse(localStorage.getItem("todos"))) {
     ".todos .card:not(.checked)"
   ).length;
 }
+
+selectGender()
+checkAge()
+welcomeMessage();
+questions();
+displayAnswers();
+
