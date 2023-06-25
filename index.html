@@ -1,46 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToDo</title>
-    <meta name="description" content="ToDo"/>
-    <link rel="icon" type="image/png" sizes="32x32" href="/todo-project/assets/lo.png"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="./Style/index.css" />
-    
-    <link rel="stylesheet" type="text/css" href="./Style/index.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="DuaaHammo">
+  <meta name="description" content="ToDo" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/todo-project/assets/lo.png" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="preload" href="./assets/icon-check.svg" as="image" type="image/svg+xml" crossorigin="anonymous">
+  <link rel="stylesheet" href="./Style/TODO.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="./Style/index.css">
+  <title>ToDo</title>
 </head>
+
 <body>
-  
-    <section>
-        <header class="header">
-            <div class="logo">
-              <a href="./index.html">
-                <img src="./assets/lo.png" alt="Logo">
-              </a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./About.html">About</a></li>
-                    <li><a href="./index.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-    </section>
+
+  <section>
+    <header class="header">
+      <div class="logo">
+        <a href="./index.html">
+          <img src="./assets/lo.png" alt="Logo">
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./About.html">About</a></li>
+          <!-- <li><a href="./index.html">Contact</a></li> -->
+        </ul>
+      </nav>
+    </header>
+  </section>
+
+  <div class="card">
+    <h1>TODO</h1>
+    <button id="theme-switcher">
+      <img src="./assets/sun-.png" alt="Change color theme" />
+    </button>
+  </div>
+
+  <main>
+
+
+    <div class="card add">
+      <div class="cb-container">
+        <button id="add-btn">+</button>
+      </div>
+      <div class="txt-container">
+        <!-- <label for="addt">Create todo</label> -->
+        <input type="text" class="txt-input" placeholder="Create a new todo..." spellcheck="false" autocomplete="off"
+          id="addt" />
+      </div>
+    </div>
+    <ul class="todos"></ul>
+    <div class="card stat">
+      <p class="corner"><span id="items-left">0</span> items left</p>
+      <div class="filter">
+        <button id="all" class="on">All</button>
+        <button id="active">Active</button>
+        <button id="completed">Completed</button>
+      </div>
+
     
-    <div class="card">
-        <h1>TODO</h1>
-        <button id="theme-switcher">
-            <img src="./assets/sun-.png" alt="Change color theme" />
-        </button>
+
+      <div class="corner">
+        <button id="clear-completed">Clear Completed</button>
+      </div>
     </div>
 
-    <main>
-      <div class="card add">
+    <!-- <div class="card add">
         <div class="cb-container">
           <button id="add-btn">+</button>
         </div>
@@ -53,10 +85,10 @@
             autocomplete="off"
           />
         </div>
-      </div>
- 
-      
-      <table id="tasktable">
+      </div> -->
+
+
+    <!-- <table id="tasktable">
         <thead>
           <tr>
             <th>Task</th>
@@ -82,30 +114,41 @@
             <td>Completed</td>
           </tr>
         </tbody>
-      </table>
+      </table> -->
 
-      <ul class="todos"></ul>
-      <div class="card stat">
-        <p class="corner"><span id="items-left">0</span> items left</p>
-        <div class="filter">
-          <button id="all" class="on">All</button>
-          <button id="active">Active</button>
-          <button id="completed">Completed</button>
-        </div>
-        <div class="corner">
-          <button id="clear-completed">Clear Completed</button>
-        </div>
+    <!-- <ul class="todos"></ul>
+    <div class="card stat">
+      <p class="corner"><span id="items-left">0</span> items left</p>
+      <div class="filter">
+        <button id="all" class="on">All</button>
+        <button id="active">Active</button>
+        <button id="completed">Completed</button>
       </div>
+      <div class="corner">
+        <button id="clear-completed">Clear Completed</button>
+      </div>
+    </div> -->
   </main>
-  
+
   <script src="./Js/app.js"></script>
 
 
 
 
-    <!--Footer-->
-    <section>
+  <!--Footer-->
+  <section>
     <footer>
+
+      <div class="footer-content">
+        <p>Drag and drop to reorder list</p>
+        Copyright © 2023 ToDo - DUA'A HAMMO <a href="https://duaahammo.myportfolio.com/contact">Let's Work Together</a>
+      </div>
+    </footer>
+  </section>
+</body>
+
+</html>
+
         <div class="footer-content">
           Copyright © 2023 ToDo - DUA'A HAMMO <a href="https://duaahammo.myportfolio.com/contact">Let's Work Together</a>
         </div>
